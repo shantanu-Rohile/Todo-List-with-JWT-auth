@@ -1,6 +1,5 @@
 {
-  "name": "mern-vite-vercel",
-  "version": "1.0.0",
+  "name": "todo-list-vercel",
   "private": true,
   "workspaces": ["Frontend", "Backend"],
   "scripts": {
