@@ -30,7 +30,6 @@ coverage/
 jest-test-results.json
 
 # Build outputs
-dist/
 build/
 Backend/dist/
 Frontend/build/
