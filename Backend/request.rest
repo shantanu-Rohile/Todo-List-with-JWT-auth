@@ -1,0 +1,40 @@
+POST http://localhost:3000/list
+Content-Type: application/json
+
+{
+    "task":"sleep"
+}
+
+
+###
+
+GET http://localhost:3000/list
+
+###
+
+DELETE  http://localhost:3000/list/68f9990c6225f3b4ebf7b12f
+
+###
+
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+    "name":"cabage",
+    "email":"cabage@gmail.com",
+    "password":"cabage1234"
+}
+
+###
+
+GET http://localhost:3000/signup
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "name":"cabage",
+    "password":"cabage1234"
+}
