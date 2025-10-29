@@ -20,12 +20,12 @@ function Todo() {
     // --- ADD THIS TRY...CATCH BLOCK ---
     try {
       // 1. POST the new task
-      await axios.post("http://localhost:3000/list", newTask, {
+      await axios.post(`${import.meta.env.VITE_API_URL}/list`, newTask, {
         headers: getAuthHeaders()
       });
 
       // 2. Re-fetch the list (this part is fine)
-      const response = await axios.get("http://localhost:3000/list", {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/list`, {
         headers: getAuthHeaders()
       });
       setTodos(response.data);
@@ -41,7 +41,7 @@ function Todo() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3000/list", {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/list`, {
         headers: getAuthHeaders()
       });
       setTodos(response.data);
@@ -50,7 +50,7 @@ function Todo() {
   }, []);
 
   const deleteTask = async (removeIndex) => {
-    await axios.delete(`http://localhost:3000/list/${removeIndex}`, {
+    await axios.delete(`${import.meta.env.VITE_API_URL}/list/${removeIndex}`, {
         headers: getAuthHeaders()
       });
     let updatedTodo = todos.filter((todo) => todo._id !== removeIndex);
