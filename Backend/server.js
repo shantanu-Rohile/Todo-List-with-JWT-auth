@@ -30,10 +30,12 @@ mongoose
 .connect(mongodbURL)
 .then(()=>{
     console.log("Databse Connected")
-    app.listen(PORT,() => {
-      console.log(`Connection established on port: ${PORT}`);
-    });
+    // app.listen(PORT,() => {
+    //   console.log(`Connection established on port: ${PORT}`);
+    // });
 })
 .catch((error)=>{
     console.log(error)
 })
+
+export default app;
